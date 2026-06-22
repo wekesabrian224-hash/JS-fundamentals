@@ -24,7 +24,7 @@ let numb3 = 20;
 let numb4 = 10;
 
 let str1 = "a";
-let str2 = "b";
+let str2 = "b"
 
 console.log(`num3=${numb3} and numb4=${numb4}`);
 console.log(`str1=${str1} and str2=${str2}`);
