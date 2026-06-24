@@ -1,8 +1,6 @@
 /*
 if the condition is falsey then
 it will not execute the code in /{}/ 
-
-Any questions -> examples
 */
 
 /* senario 1:
