@@ -37,10 +37,10 @@ const bracket2 = 32333;
 const bracket3 = 500000;
 const bracket4 = 800000;
 
-const band1 = bracket1 * 0.10;                    // 2,400
-const band2 = (bracket2 - bracket1) * 0.25;       // 2,083
-const band3 = (bracket3 - bracket2) * 0.30;       // 140,300
-const band4 = (bracket4 - bracket3) * 0.325;      // 97,500
+const band1 = bracket1 * 0.10;                    
+const band2 = (bracket2 - bracket1) * 0.25;       
+const band3 = (bracket3 - bracket2) * 0.30;       
+const band4 = (bracket4 - bracket3) * 0.325;      
 
 let grossPAYE = 0;
 
@@ -58,12 +58,11 @@ if (taxableIncome <= 24000) {
 
 const personalRelief = 2400;
 let paye = grossPAYE - personalRelief;
-if (paye < 0) paye = 0;                           // paye can never be negative
+if (paye < 0) paye = 0;                           
 
 // STEP 5: SHIF & HOUSING LEVY
-const shif = grossSalary * 0.0275;                // 2.75% of gross
-const housingLevy = grossSalary * 0.015;          // 1.5% of gross
-
+const shif = grossSalary * 0.0275;                
+const housingLevy = grossSalary * 0.015;          
 // STEP 6: TOTALS 
 const totalDeductions = totalNSSF + paye + shif + housingLevy;
 const netPay = grossSalary - totalDeductions;
