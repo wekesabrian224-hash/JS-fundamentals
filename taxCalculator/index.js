@@ -11,23 +11,18 @@
 let theSalary;
 
 while (true) {
-  let gross = prompt("Enter your gross salary");
+  let input = prompt("Enter your gross monthly salary (KES)");
 
-  if (!isNaN(gross)) {
-    gross = Number(gross);
-
-    if (gross > 0) {
-      theSalary = gross;
+  if (!isNaN(input)) {
+    input = Number(input);
+    if (input > 0) {
+      theSalary = input;
       break;
     }
   }
-
-  alert(`Invalid amount entered.
-    Ensure you enter a number greater than 0
-  `);
+  alert(`Invalid amount. Enter a number greater than 0.`);
 }
-
-console.log(`Gross salary is ${theSalary} its type ${typeof theSalary}`);
+ // Payee
 if (theSalary < 24000) {
   paye = theSalary * 0.1;
 } else if (theSalary > 24000 && theSalary <= 32333) {
@@ -38,4 +33,16 @@ if (theSalary < 24000) {
   paye = theSalary * 0.325;
 } else if (theSalary >= 800000 && theSalary) {
   paye = theSalary * 0.35;
+}
+
+// nssf
+let nssf=null
+if(theSalary>=9000){
+  nssf=theSalary*0.06
+}
+else if(theSalary>9000 && <= 108000){
+  nssf=9000*0.06+(theSalary-9000)*0.06
+}
+else if (theSalary > 108000){
+  nssf=6480
 }
