@@ -22,7 +22,7 @@ if (grossSalary <= 9000) {
   nssfTier1 = grossSalary * 0.06;
   nssfTier2 = 0;
 } else {
-  nssfTier1 = 9000 * 0.06;                        // 540
+  nssfTier1 = 9000 * 0.06;                        
   nssfTier2 = (grossSalary - 9000) * 0.06;
 }
 
