@@ -71,15 +71,15 @@ countDown(10);
 //     1*3=
 //     1*2=
 
-// Function 1: Gets valid numbers from the user
+// 
 function getNumbers() {
-  let number1 = Number(prompt("Enter the first number (greater than 1):"));
+  let number1 = Number(prompt("Enter the first number greater than 1:"));
 
   while (number1 <= 1 || isNaN(number1)) {
     number1 = Number(prompt("Invalid! Enter a number greater than 1:"));
   }
 
-  let number2 = Number(prompt("Enter the second number (greater than 1):"));
+  let number2 = Number(prompt("Enter the second number greater than 1:"));
 
   while (number2 <= 1 || isNaN(number2)) {
     number2 = Number(prompt("Invalid! Enter a number greater than 1:"));
@@ -100,10 +100,10 @@ function multiplicationTable(param1, param2) {
     return;
   }
 
-  let i = param1;  // i created an outer loop
+  let i = param1;  //  created an outer loop
 
   while (i >= 1) {
-    let j = param2; // cma up with thee inner loop
+    let j = param2; // came up with thee inner loop
 
     while (j >= 1) {
       console.log(`${i} * ${j} = ${i * j}`);
@@ -117,3 +117,93 @@ function multiplicationTable(param1, param2) {
 
 // Start the program
 getNumbers();
+
+
+// create a function @checkPassword<give it any name>.
+//     it does not take any parameters.
+//     this function
+//     1. prompts the user to enter a password (a string).
+//     2. use a loop to keep prompting until the password meets ALL these rules:
+//        - at least 8 characters long
+//        - contains at least one number (0-9)
+//        - contains at least one uppercase letter
+//     3. once valid, call @analyzePassword(password)
+
+// create a function @analyzePassword<give it any name>.
+//     this function takes in the following parameter
+//     @param1 a valid password string (already passed the checks above)
+//
+//     it should console.log the following, calculated from the string itself
+//     (not hardcoded numbers):
+//     1. total length of the password
+//     2. how many digits it contains
+//     3. how many uppercase letters it contains
+//     4. how many lowercase letters it contains
+//     5. the password reversed
+//
+//     example -> analyzePassword("Passw0rd123")
+//     should log something like:
+//     Length: 11
+//     Digits: 4
+//     Uppercase: 1
+//     Lowercase: 6
+//     
+
+// Function 1: Prompts the user for a valid password
+function checkPassword() {
+  let password = prompt("Enter a password:"); // prompts the user to key in the password
+
+  while (
+    password.length < 8 ||
+    !/[0-9]/.test(password) ||
+    !/[A-Z]/.test(password)
+  ) {
+    password = prompt(
+      "Invalid! Password must:\n" +
+      "- Be at least 8 characters\n" +
+      "- Contain at least one number\n" +
+      "- Contain at least one uppercase letter"
+    );
+  }
+
+  analyzePassword(password);
+}
+
+// Function 2: Analyzes the password
+function analyzePassword(password) {
+  let digits = 0;
+  let uppercase = 0;
+  let lowercase = 0;
+  let reversed = "";
+
+  let i = 0;
+
+  while (i < password.length) {
+    let character = password[i];
+
+    if (character >= "0" && character <= "9") {
+      digits++;
+    }
+
+    if (character >= "A" && character <= "Z") {
+      uppercase++;
+    }
+
+    if (character >= "a" && character <= "z") {
+      lowercase++;
+    }
+
+    reversed = character + reversed;
+
+    i++;
+  }
+
+  console.log("Length:", password.length);
+  console.log("Digits:", digits);
+  console.log("Uppercase:", uppercase);
+  console.log("Lowercase:", lowercase);
+  console.log("Reversed:", reversed);
+}
+
+// Start the program
+checkPassword();
