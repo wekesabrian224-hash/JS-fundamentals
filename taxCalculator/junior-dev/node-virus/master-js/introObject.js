@@ -34,9 +34,7 @@ const car = {
   2026: "Latest Model",
   funFact: "The Porsche 911 has been in production since 1964.",
   alertInfo: function () {
-    alert(
-       
-    );
+    alert();
   },
 };
 car.alertInfo();
