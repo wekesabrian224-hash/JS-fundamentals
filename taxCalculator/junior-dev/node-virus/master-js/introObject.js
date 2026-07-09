@@ -35,26 +35,7 @@ const car = {
   funFact: "The Porsche 911 has been in production since 1964.",
   alertInfo: function () {
     alert(
-        "Name: " +
-        this.name +
-        "\n" +
-        "Model: " +
-        this.model +
-        "\n" +
-        "Top Speed: " +
-        this.topSpeed +
-        "\n" +
-        "Manufacturer: " +
-        this.engineInformation.manufacturer +
-        "\n" +
-        "Engine Type: " +
-        this.engineInformation.engineType +
-        "\n" +
-        "Horsepower: " +
-        this.engineInformation.horsepower +
-        "\n" +
-        "Fun Fact: " +
-        this.funFact,
+       
     );
   },
 };
