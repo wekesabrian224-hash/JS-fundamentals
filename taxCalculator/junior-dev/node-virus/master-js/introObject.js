@@ -37,4 +37,4 @@ const car = {
     alert();
   },
 };
-car.alertInfo();
+console.log(car)
