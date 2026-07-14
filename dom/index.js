@@ -11,7 +11,7 @@ ther are 5 methods of DOM manipukations
 5. QuerySelecorAll()
 
 //1 getElementById()
-=>is a dom method ussed to find and return a specific idea attribute
+=>is a dom method used to find and return a specific idea attribute
 SYNTAX: document.getElementById()
 */
 
