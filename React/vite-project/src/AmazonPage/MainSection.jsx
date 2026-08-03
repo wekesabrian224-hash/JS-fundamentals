@@ -13,6 +13,7 @@ function MainSection() {
       <ItemCard />
       <ItemCard />
       <ItemCard />
+      <ItemCard />
     </div>
   );
 }
