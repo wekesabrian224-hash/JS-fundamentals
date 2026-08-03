@@ -1,10 +1,12 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
-import Navigation from "./AmazonPage/Navigation";
+import "./index.css";
+
+import AmazonPage from "./AmazonPage";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <Navigation />
+    <AmazonPage />
   </StrictMode>,
 );

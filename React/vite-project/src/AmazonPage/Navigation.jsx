@@ -1,11 +1,12 @@
 import logo from "./assets/logo.png";
 
 //component naming
-function Navigate() {
+function Navigation() {
   return (
-    <div>
-      <h2>Navigation Section</h2>
+    <div className="nav">
+      <img src={logo} width="60px" />
+      <input placeholder="search" />
     </div>
   );
 }
-export default Navigate;
+export default Navigation;
