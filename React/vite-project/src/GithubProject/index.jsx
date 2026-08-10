@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+import TopNav from "./TopNav";
+import InfoSection from "./InfoSection";
+import PersonCard from "./PersonCard";
+
 function GithubProject() {
   // State to store the list of GitHub users
   const [people, setPeople] = useState([]);
@@ -13,10 +17,10 @@ function GithubProject() {
         url: "https://api.github.com/users",
       });
 
-      // Save the fetched data into state
+      // Save the fetched users into state
       setPeople(response.data);
     } catch (e) {
-      // Handle any errors
+      // Display any errors in the console
       console.log("Error is ", e);
     }
   };
@@ -26,7 +30,7 @@ function GithubProject() {
   // After fetching: [{...}, {...}, ...]
   console.log(people);
 
-  // Runs only once when the component is mounted
+  // Runs once when the component mounts
   useEffect(() => {
     getUserData();
   }, []);
@@ -34,7 +38,16 @@ function GithubProject() {
   // Lifecycle: GithubProject
   return (
     <div>
-      <h1>Github project</h1>
+      {/* Top navigation bar */}
+      <TopNav />
+
+      {/* Information section */}
+      <InfoSection people={people} />
+
+      {/* Display a card for every GitHub user */}
+      {people.map((person) => (
+        <PersonCard key={person.id} person={person} />
+      ))}
     </div>
   );
 }
