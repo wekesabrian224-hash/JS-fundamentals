@@ -36,3 +36,7 @@ def sum2(*args):
 
 
 sum2(29, 49, 34, 40, 69, 98)
+
+# args generates a tuple  ===>> takes alot of argurments
+# # the number of aguments are unlimited
+#

@@ -6,3 +6,5 @@ def args_kwargs(*args,**kwargs):
 
 
 args-kwargs(45,39,a=2,b=30)
+
+#use the args first and the kwargs later
