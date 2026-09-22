@@ -32,6 +32,13 @@ class House:
   location=""
   architect="kimani"
 
+  def print_self(self):
+    #self>>referd to the object
+    print(self)
+    print(self.__dict__) # prints all the properties in the dictionary
+
+
+
 macrine_house=House()
 print(f"macrines house bedrooms{macrine_house.bedrooms}")
 print(f"macrines house bedrooms{macrine_house.bathrooms}")
